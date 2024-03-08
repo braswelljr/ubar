@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-native/recommended"
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "jsx": true,
+      "arrowFunctions": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "next": {
+      "rootDir": ["apps/*/"]
+    },
+    "tailwindcss": {
+      "callees": ["cn", "cva"]
+    }
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-native"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": [
+      "warn",
+      {},
+      {
+        "usePrettierrc": true,
+        "ignoreFiles": [
+          "**/node_modules/**",
+          "**/dist/**",
+          "**/public/**/workbox-*.{js,js.map}"
+        ]
+      }
+    ],
+    // "sort-imports": [
+    //   "warn", {
+    //     "ignoreCase": false,
+    //     "ignoreDeclarationSort": false,
+    //     "ignoreMemberSort": false,
+    //     "allowSeparatedGroups": false
+    //   }
+    // ],
+    // typescript rules
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-console": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
