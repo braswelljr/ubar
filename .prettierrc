@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "endOfLine": "auto",
+  "trailingComma": "none",
+  "printWidth": 120,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "useTabs": false,
+  "quoteProps": "as-needed",
+  "importOrder": [
+    "^(react/(.*)$)|^(react$)",
+    "^(expo/(.*)$)|^(expo$)",
+    "^(react-icons/(.*)$)|^(react-icons$)",
+    "<THIRD_PARTY_MODULES>",
+    "^types$",
+    "^~local/(.*)$",
+    "^~/config/(.*)$",
+    "^~/lib/(.*)$",
+    "^~/hooks/(.*)$",
+    "^~/components/(.*)$",
+    "^~/context/(.*)$",
+    "^~/utils/(.*)$",
+    "^~/styles/(.*)$",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": [
+    "typescript",
+    "jsx",
+    "decorators-legacy"
+  ],
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports"
+  ]
+}
