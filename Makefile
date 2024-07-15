@@ -26,9 +26,8 @@ else
 	STYLELINT := npx stylelint
 endif
 
-CLEAN_ITEMS = .next/ out/ .turbo/ dist/ public/sw.js public/sw.js.map \
-              public/workbox-*.js public/workbox-*.js.map yarn-error.log \
-              .swc/ .eslintcache .prettiercache .contentlayercache \
+CLEAN_ITEMS = .expo/ out/ .turbo/ dist/ yarn-error.log web-build/ \
+              .eslintcache .prettiercache .contentlayercache \
               .contentlayercache.lock .contentlayer .stylelintcache \
               .stylelintignorecache .stylelintignorecache.lock .stylelintcache
 
@@ -60,6 +59,6 @@ format:
 clean:
 	rm -rf $(CLEAN_ITEMS)
 
-.PHONY: verbose-clean
-verbose-clean:
+.PHONY: purge
+purge:
 	rm -rf $(CLEAN_ITEMS) node_modules pnpm-lock.yaml package-lock.json yarn.lock bun.lockb

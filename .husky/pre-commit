@@ -2,11 +2,10 @@
 . "$(dirname "$0")/_/husky.sh"
 . "$(dirname "$0")/common.sh"
 
-REMOVE="rm -rf .next/ out/ .turbo/ dist/ public/sw.js public/sw.js.map \
-              public/workbox-*.js public/workbox-*.js.map yarn-error.log \
-              .swc/ .eslintcache .prettiercache .contentlayercache \
-              .contentlayercache.lock .contentlayer .stylelintcache \
-              .stylelintignorecache .stylelintignorecache.lock .stylelintcache"
+REMOVE="rm -rf .expo/ out/ .turbo/ dist/ yarn-error.log \
+.swc/ .eslintcache .prettiercache .contentlayercache \
+.contentlayercache.lock .contentlayer .stylelintcache \
+.stylelintignorecache .stylelintignorecache.lock .stylelintcache"
 
 # remove files from previous builds
 eval $REMOVE
@@ -24,16 +23,16 @@ pnpm lint
 # pnpm run build
 # test for last command executed
 if [ $? -eq 0 ]; then
-  # remove build files
-  eval $REMOVE
+    # remove build files
+    eval $REMOVE
 
-  # stage files for commit
-  git add .
+    # stage files for commit
+    git add .
 
-  echo "Staged changes and Build Successful 😆!"
-  exit 0
+    echo "Staged changes and Build Successful 😆!"
+    exit 0
 
-  else
+else
     echo "Oops! Build failed 😢."
     exit 130
 fi
