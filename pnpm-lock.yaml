@@ -27,8 +27,8 @@ importers:
         specifier: ~16.0.2
         version: 16.0.2(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
       expo-font:
-        specifier: ~12.0.8
-        version: 12.0.8(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
+        specifier: ~12.0.9
+        version: 12.0.9(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
       expo-linking:
         specifier: ~6.3.1
         version: 6.3.1(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
@@ -2805,8 +2805,8 @@ packages:
     peerDependencies:
       expo: '*'
 
-  expo-font@12.0.8:
-    resolution: {integrity: sha512-xK9kOEyD/vnREicM5yS2uVwzB83weu+UE6QwJRH2dhoQcdJiWGGKOj+blJ8GrtU+BqtyNijyWcwfBbYOJnf8eQ==}
+  expo-font@12.0.9:
+    resolution: {integrity: sha512-seTCyf0tbgkAnp3ZI9ZfK9QVtURQUgFnuj+GuJ5TSnN0XsOtVe1s2RxTvmMgkfuvfkzcjJ69gyRpsZS1cC8hjw==}
     peerDependencies:
       expo: '*'
 
@@ -9734,7 +9734,7 @@ snapshots:
     dependencies:
       expo: 51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8))
 
-  expo-font@12.0.8(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8))):
+  expo-font@12.0.9(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8))):
     dependencies:
       expo: 51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8))
       fontfaceobserver: 2.3.0
@@ -9824,7 +9824,7 @@ snapshots:
       babel-preset-expo: 11.0.12(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8))
       expo-asset: 10.0.10(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
       expo-file-system: 17.0.1(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
-      expo-font: 12.0.8(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
+      expo-font: 12.0.9(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
       expo-keep-awake: 13.0.2(expo@51.0.20(@babel/core@7.24.8)(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
       expo-modules-autolinking: 1.11.1
       expo-modules-core: 1.12.19
