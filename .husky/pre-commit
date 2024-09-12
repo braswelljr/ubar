@@ -1,6 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-. "$(dirname "$0")/common.sh"
 
 REMOVE="rm -rf .expo/ out/ .turbo/ dist/ yarn-error.log \
 .swc/ .eslintcache .prettiercache .contentlayercache \
@@ -11,27 +9,21 @@ REMOVE="rm -rf .expo/ out/ .turbo/ dist/ yarn-error.log \
 eval $REMOVE
 
 # lint and build
-pnpm lint
+pnpx lint-staged
 
-# # lint and fix
-# pnpm run lint:fix
+# "*.**": ["pnpm run lint", "pnpm run format"]
 
-# # format code
-# pnpm run format
-
-# build and test for truthy
-# pnpm run build
 # test for last command executed
 if [ $? -eq 0 ]; then
     # remove build files
     eval $REMOVE
-
+    
     # stage files for commit
     git add .
-
+    
     echo "Staged changes and Build Successful 😆!"
     exit 0
-
+    
 else
     echo "Oops! Build failed 😢."
     exit 130
