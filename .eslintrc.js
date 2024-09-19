@@ -33,7 +33,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       'warn',
       {
-        extensions: ['.tsx', '.mdx']
+        extensions: ['.tsx', '.mdx', '.jsx']
       }
     ],
     'react/jsx-no-target-blank': 'off',
